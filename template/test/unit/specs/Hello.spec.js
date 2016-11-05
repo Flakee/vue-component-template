@@ -1,13 +1,13 @@
 import Vue from 'vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-import Hello from 'src/components/Hello'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import MyComponent from 'src/MyComponent'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
-describe('Hello.vue', () => {
-  it('should render correct contents', () => {
+describe('MyComponent.vue', () => {
+  it('should have msg data set to Hi!', () => {
     const vm = new Vue({
       el: document.createElement('div'),
-      render: (h) => h(Hello){{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+      render: (h) => h(MyComponent){{#if_eq lintConfig "airbnb"}},{{/if_eq}}
     }){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-    expect(vm.$el.querySelector('.hello h1').textContent)
-      .to.equal('Welcome to Your Vue.js App'){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+    expect(vm.$children[0].msg)
+      .to.equal('Hi!'){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
   }){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 }){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
