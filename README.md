@@ -1,8 +1,10 @@
-# vue-webpack-boilerplate
+# vue-component-template
 
-> A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction.
+> A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction for open source Vue components.
 
-> This template is Vue 2.0 compatible. For Vue 1.x use this command: `vue init webpack#1.0 my-project`
+> Based on the official vue-webpack-boilerplate template
+
+> This template is Vue 2.0 compatible.
 
 ## Documentation
 
@@ -15,7 +17,7 @@ This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It
 
 ``` bash
 $ npm install -g vue-cli
-$ vue init webpack my-project
+$ vue init monterail/vue-component-template my-project
 $ cd my-project
 $ npm install
 $ npm run dev
@@ -30,11 +32,9 @@ $ npm run dev
   - Lint-on-save with ESLint
   - Source maps
 
-- `npm run build`: Production ready build.
-  - JavaScript minified with [UglifyJS](https://github.com/mishoo/UglifyJS2).
-  - HTML minified with [html-minifier](https://github.com/kangax/html-minifier).
-  - CSS across all components extracted into a single file and minified with [cssnano](https://github.com/ben-eb/cssnano).
-  - All static assets compiled with version hashes for efficient long-term caching, and a production `index.html` is auto-generated with proper URLs to these generated assets.
+- `npm run bundle`: Create UMD bundle.
+
+- `npm run docs`: Create docs inside `/gh-pages` ready to be published
 
 - `npm run unit`: Unit tests run in PhantomJS with [Karma](http://karma-runner.github.io/0.13/index.html) + [Mocha](http://mochajs.org/) + [karma-webpack](https://github.com/webpack/karma-webpack).
   - Supports ES2015 in test files.
@@ -46,11 +46,3 @@ $ npm run dev
   - Works with one command out of the box:
     - Selenium and chromedriver dependencies automatically handled.
     - Automatically spawns the Selenium server.
-
-### Fork It And Make Your Own
-
-You can fork this repo to create your own boilerplate, and use it with `vue-cli`:
-
-``` bash
-vue init username/repo my-project
-```

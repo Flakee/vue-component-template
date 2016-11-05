@@ -11,9 +11,11 @@ npm install
 # serve with hot reload at localhost:8080
 npm run dev
 
-# build for production with minification
-npm run build
-{{#unit}}
+# create UMD bundle.
+npm run bundle
+
+# Create docs inside /gh-pages ready to be published
+npm run docs
 
 # run unit tests
 npm run unit
