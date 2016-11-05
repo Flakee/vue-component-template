@@ -17,6 +17,7 @@ npm run bundle
 # Create docs inside /gh-pages ready to be published
 npm run docs
 
+{{#unit}}
 # run unit tests
 npm run unit
 {{/unit}}

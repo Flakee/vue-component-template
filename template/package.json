@@ -7,14 +7,11 @@
   "scripts": {
     "dev": "node build/dev-server.js",
     "bundle": "webpack --config build/webpack.bundle.conf.js",
-    "docs": "rm -rf gh-pages && mkdir gh-pages && node build/build.js",{{#unit}},
+    "docs": "rm -rf gh-pages && mkdir gh-pages && node build/build.js"{{#unit}},
     "unit": "karma start test/unit/karma.conf.js --single-run"{{/unit}}{{#e2e}},
     "e2e": "node test/e2e/runner.js"{{/e2e}}{{#if_or unit e2e}},
     "test": "{{#unit}}npm run unit{{/unit}}{{#unit}}{{#e2e}} && {{/e2e}}{{/unit}}{{#e2e}}npm run e2e{{/e2e}}"{{/if_or}}{{#lint}},
     "lint": "eslint --ext .js,.vue src{{#unit}} test/unit/specs{{/unit}}{{#e2e}} test/e2e/specs{{/e2e}}"{{/lint}}
-  },
-  "dependencies": {
-    "vue": "^2.0.4"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
@@ -88,6 +85,7 @@
     "pug-loader": "^2.3.0",
     "shelljs": "^0.7.4",
     "url-loader": "^0.5.7",
+    "vue": "^2.0.4",
     "vue-loader": "^9.4.0",
     "vue-style-loader": "^1.0.0",
     "webpack": "^1.13.2",
